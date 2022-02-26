@@ -1,33 +1,34 @@
 #include<stdio.h>
-void Addition (float, float);
+void add();
 int main(){
     int i;
-    float num1, num2, sum;
-    printf("Enter 1st number : ");
-    scanf("%f", &num1);
-    printf("Enter 2nd number : ");
-    scanf("%f", &num2);
-
-    printf("\nEnter your choice");
-    printf("\n1: Additon\n2: Subtraction\n3: Multiplication\n4: Division\n");
-    
-    scanf("%d",&i);
-    switch(i){
-        case 1: Addition(num1, num2);
-        break;
-        case 2:
-        break;
-        case 3:
-        break;
-        case 4:
-        break;
-        default:
-        break;
-    }
+printf("Enter your choice");
+scanf("%d",&i);
+switch(i){
+    case 1:
+    add();
+    case 2:
+    case 3:
+    case 4:
+    default:
+    break;
+}
 
 return 0;
 }
-
-void Addition(float num1, float num2){
-    printf("Addition = %.2f", num1 + num2);
+void add(){
+    
+    int num,i;
+    float arr[100],sum=0;
+    printf("How many numbers you want to add");
+    scanf("%d",&num);
+    fflush(stdin);
+    for(i=0;i<num;i++){
+        scanf("%float ",&arr[i]);
+    }
+      for(i=0;i<num;i++){
+          sum = sum+arr[i];
+    }
+    
+    printf("Sum =%f",sum);
 }
